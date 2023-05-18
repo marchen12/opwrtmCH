@@ -117,7 +117,7 @@ jobs:
        uses: actions/upload-artifact@main
        if: always()
         with:
-          name: OpenWrt_K2P_bin-${{ env.Date_and_RunNumber }}
+          name: OpenWrt_11ac2100_bin-${{ env.Date_and_RunNumber }}
           path: openwrt/bin
 
       - name: Remove packages
@@ -132,7 +132,7 @@ jobs:
         uses: actions/upload-artifact@main
         if: always()
         with:
-          name: OpenWrt-K2P-Firmware-${{ env.Date_and_RunNumber }}
+          name: OpenWrt-11ac2100-Firmware-${{ env.Date_and_RunNumber }}
           path: ${{ env.Firmware_path }}
 
       - name: Publish release
