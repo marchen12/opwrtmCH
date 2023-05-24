@@ -34,10 +34,6 @@ jobs:
         env:
           DEBIAN_FRONTEND: noninteractive
         run: |
-          echo "Date_and_RunNumber=$(date -u +'%Y-%m-%d')-#$GITHUB_RUN_NUMBER" >> $GITHUB_ENV
-          echo "Deleting files, please wait ..."
-          sudo rm -rf /usr/share/dotnet /etc/apt/sources.list.d/*
-          sudo swapoff /swapfile
           set +e 
           docker rmi `docker images -q`
           echo "Deleting files, please wait ..."
