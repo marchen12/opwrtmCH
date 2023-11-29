@@ -94,8 +94,8 @@ jobs:
       - name: Download package
         run: |
           cd openwrt && make download -j$(($(nproc)+1))
-          find dl -size -1024c -exec ls -l {} \;
-          find dl -size -1024c -exec rm -f {} \;
+          find dl -size -2048c -exec ls -l {} \;
+          find dl -size -2048c -exec rm -f {} \;
 
       - name: Multi-thread compile
         run: |
